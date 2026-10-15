@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-primary: #FFA51F;
+    --brand-primary-hover: #F29412;
+    --brand-cream: #FFF8ED;
+    --brand-white: #FFFFFF;
+    --brand-gold: #E9B24A;
+    --brand-text: #171717;
+    --brand-text-muted: #666666;
+    --brand-border: #E7E2D9;
+    --brand-green: #72D94B;
+    --brand-red: #DC5252;
+    --brand-gray: #F5F5F4;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--brand-text);
+    background-color: var(--brand-cream);
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E7E2D9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFA51F;
+}
+
+/* Print specific styles for reports and receipts */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-area {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
